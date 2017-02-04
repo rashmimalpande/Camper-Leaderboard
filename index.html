@@ -4,6 +4,7 @@
     <head>
         <title>Camper Leaderboard</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
     </head>
 
     <body>
@@ -22,11 +23,17 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-
+                    <tr v-for="player in players">
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.points }}</td>
+                        <td>{{ player.all }}</td>
                     </tr>
+
                 </tbody>
             </table>
         </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

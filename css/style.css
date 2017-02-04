@@ -2,6 +2,8 @@
     margin: 50px auto;
     width: 80%;
     background: #eee;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
 }
 
 #header{
@@ -15,16 +17,16 @@
 #header h3{
     padding-top: 13px;
 }
+
 .leader-board{
     width: 100%;
     text-align: center;
-    border: 1px solid black;
 }
 
 .leader-board thead{
     background: #8aa29e;
 }
 
-.leader-board thead td{
-    padding: 10px;
+td{
+    padding: 15px;;
 }
