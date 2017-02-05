@@ -5,6 +5,7 @@
         <title>Camper Leaderboard</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
 
     <body>
@@ -17,8 +18,10 @@
                 <thead>
                     <tr>
                         <td>Camper</td>
-                        <td><a v-on:click="filterMax30()">Points in Last 30 Days</a></td>
-                        <td><a v-on:click="filterAllTime()">All time Points</a></td>
+                        <td><a v-bind:class="{active: is30DaysActive}" v-on:click="filterMax30()">Points in Last 30 Days<i class="fa fa-caret-down" aria-hidden="true"></a></i>
+</td>
+                        <td><a v-bind:class="{active: isAllTimeActive}" v-on:click="filterAllTime()">All time Points<i class="fa fa-caret-down" aria-hidden="true"></a></i>
+</td>
                     </tr>
                 </thead>
 

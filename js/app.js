@@ -1,7 +1,8 @@
 var app =new Vue({
     el: '.main',
     data: {
-
+        is30DaysActive: false,
+        isAllTimeActive: false,
         players:[ 
             {
                 name: 'Ted Mosby',
@@ -56,7 +57,8 @@ var app =new Vue({
             sorted = players.sort(function(a, b){
                 return b.points - a.points;
             });
-
+            this.is30DaysActive=true;
+            this.isAllTimeActive=false;
             return sorted;
         },
 
@@ -68,6 +70,8 @@ var app =new Vue({
                 return b.all - a.all;
             });
 
+            this.is30DaysActive=false;
+            this.isAllTimeActive=true;
             return sorted;
         }
     }
